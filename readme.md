@@ -1,1 +1,1 @@
-https://szkonieczny.github.io/goit-markup-hw-06/
+https://szkonieczny.github.io/goit-markup-hw-07/
