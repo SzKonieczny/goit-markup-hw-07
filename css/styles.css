@@ -91,8 +91,10 @@ li {
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
+.filter {
+}
 
-.filter-box {
+.filter__list {
   display: flex;
   justify-content: center;
   gap: 8px;
@@ -100,7 +102,7 @@ li {
   margin-bottom: 34px;
 }
 
-.filter-button {
+.filter__button {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 500;
@@ -117,7 +119,7 @@ li {
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.filter-button:is(:hover, :focus, :active) {
+.filter__button:is(:hover, :focus, :active) {
   background-color: var(--brand-color-active);
   color: var(--brand-color-img-background);
   border-color: var(--brand-color-active);
@@ -264,7 +266,7 @@ li {
   width: fit-content;
 }
 
-.item-gap {
+.filter {
   margin-bottom: 34px;
 }
 
