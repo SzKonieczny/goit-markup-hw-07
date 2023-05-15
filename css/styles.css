@@ -219,7 +219,7 @@ li {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.li-box:is(:hover, :focus) {
+.page-footer__social-link:is(:hover, :focus) {
   background-color: var(--brand-color-order-button-background);
 }
 
@@ -255,7 +255,7 @@ li {
   fill: var(--brand-color-joun-us-icon-fill);
 }
 
-.index-footer-logo {
+/* .index-footer-logo {
   font-family: "Raleway";
   font-style: normal;
   font-weight: 700;
@@ -264,7 +264,7 @@ li {
   letter-spacing: 0.03em;
   text-decoration: none;
   width: fit-content;
-}
+} */
 
 .filter {
   margin-bottom: 34px;
@@ -347,7 +347,7 @@ li {
 
 .logo {
   font-family: "Raleway";
-  /* font-style: normal; */
+  font-style: normal;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.2;
