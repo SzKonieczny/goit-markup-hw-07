@@ -31,3 +31,9 @@ li {
 }
 
 @import "./components/header";
+@import "./components/section";
+
+.button__label--solutions {
+  width: fit-content;
+  padding: 10px auto;
+}
