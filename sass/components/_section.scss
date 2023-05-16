@@ -154,3 +154,122 @@
   letter-spacing: 0.03em;
   text-align: center;
 }
+
+.team-bg {
+  background-color: $secondaryButColor;
+}
+
+.members {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  &__item {
+    width: 270px;
+    background-color: $primaryBg;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__iconsbox {
+    display: flex;
+    padding: 12px;
+    border-radius: 50%;
+    fill: $heaaderIconFillColor;
+    transition-property: background-color, fill;
+    transition-duration: $globalTransitionDuration;
+    transition-timing-function: $globalTransitionTimingFunction;
+  }
+
+  &__iconsbox:is(:hover, :focus) {
+    background-color: $primaryButBgColor;
+    fill: $primaryTextIconColor;
+  }
+
+  &__list {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__name {
+    font-style: normal;
+    font-weight: $hederFontWeight;
+    font-size: $primaryButFontSize;
+    line-height: 1.2;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: $primaryFontColor;
+  }
+
+  &__position {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    /* margin-bottom: 30px; */
+  }
+
+  &__profession {
+    font-style: normal;
+    font-weight: 400;
+    font-size: $primaryButFontSize;
+    line-height: 1.2;
+    /* identical to box height */
+    color: $globalFontDescriptionColor;
+    text-align: center;
+    letter-spacing: 0.03em;
+  }
+
+  &__social-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 30px;
+    margin-top: 16px;
+  }
+}
+
+.clients {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  &__icon {
+    fill: #afb1b8;
+    /* display: block; */
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__icon svg {
+    display: block;
+  }
+
+  &__icon:is(:hover, :focus) {
+    fill: $hoverfocusactiveColor;
+  }
+
+  &__item {
+    box-sizing: border-box;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  &__item:is(:hover, :focus) {
+    border-color: $hoverfocusactiveColor;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 30px;
+  }
+}
