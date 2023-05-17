@@ -30,6 +30,7 @@
   -ms-user-select: none;
   user-select: none;
   align-items: center;
+  margin-top: 20px;
 
   &__checkmark {
     position: absolute;
@@ -47,16 +48,38 @@
     line-height: 1.7;
     /* identical to box height, or 171% */
     letter-spacing: 0.03em;
-    color: $globalFontDescriptionColor;
+    color: #757575;
+  }
+
+  &__statement a {
+    color: #2196f3;
   }
 }
 
-.checkbox input {
+.checkbox .checkbox__checkmark:after {
+  left: 5px;
+  top: 1.5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkbox input:checked ~ .checkbox__checkmark {
+  background-color: #2196f3;
+}
+
+.checkbox__checkmark::after {
+  content: "";
   position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
+  display: none;
+}
+
+.checkbox input:checked ~ .checkbox__checkmark:after {
+  display: flex;
 }
 
 .is-hidden {
@@ -65,16 +88,13 @@
   pointer-events: none;
 }
 
-.is-hidden .modal {
-  transform: scale(0);
-}
-
 .form {
   display: flex;
   flex-direction: column;
   align-items: center;
   min-width: 448px;
   /* border: 1px solid red; */
+  padding: 0 40px 0 40px;
 
   &__box {
     display: flex;
@@ -98,18 +118,12 @@
     width: 448px;
     height: 40px;
     border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: $primaryButBorderRadius;
+    border-radius: 4px;
     padding-left: 12px;
     transition-property: color, background-color, box-shadow;
     transition-duration: $globalTransitionDuration;
     transition-timing-function: $globalTransitionTimingFunction;
     /* margin-left: 12px; */
-  }
-
-  &__inputs:is(:hover, :focus-within) {
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border: 1px solid $hoverfocusactiveColor;
-    fill: $hoverfocusactiveColor;
   }
 
   &__inputs--comment {
@@ -161,16 +175,15 @@
   height: 581px;
   /* left: 50%;
   top: 50%; */
-  background: $primaryBg;
+  background: #ffffff;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: $primaryButBorderRadius;
+  border-radius: 4px;
   top: 218px;
   transform: scale(1);
-  transition: transform 2s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 2s $globalTransitionTimingFunction;
 
   &__checkbox {
-    margin-top: 20px;
   }
 
   &__close {
@@ -180,12 +193,11 @@
     left: 490px;
     top: 8px;
     border-radius: 50%;
-    background: $primaryBg;
+    background: #ffffff;
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
   }
 
   &__form {
-    padding: 0 40px 0 40px;
   }
 }

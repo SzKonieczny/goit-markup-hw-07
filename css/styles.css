@@ -1049,10 +1049,10 @@ textarea {
   align-items: center;
   min-width: 448px;
   /* border: 1px solid red; */
+  padding: 0 40px 0 40px;
 }
 
 .modal__form {
-  padding: 0 40px 0 40px;
 }
 
 /* The container */
@@ -1068,10 +1068,10 @@ textarea {
   -ms-user-select: none;
   user-select: none;
   align-items: center;
+  margin-top: 20px;
 }
 
 .modal__checkbox {
-  margin-top: 20px;
 }
 
 /* Hide the browser's default checkbox */
@@ -1174,7 +1174,7 @@ textarea {
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-.form__input-width {
+.form__inputs-width {
   width: 394px;
   margin-left: 12px;
 }
