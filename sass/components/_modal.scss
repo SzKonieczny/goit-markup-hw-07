@@ -32,15 +32,6 @@
   align-items: center;
   margin-top: 20px;
 
-  &__checkmark {
-    position: absolute;
-    align-items: center;
-    left: 0px;
-    height: 15px;
-    width: 16px;
-    /* background-color: #eee; */
-  }
-
   &__statement {
     font-style: normal;
     font-weight: 400;
@@ -112,6 +103,38 @@
     margin-top: 12px;
   }
 
+  &__button {
+    width: 200px;
+    height: 50px;
+
+    /* box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); */
+
+    margin-top: 30px;
+    transition-property: color, background-color, box-shadow;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+  }
+
+  &__button p {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.9;
+    /* identical to box height, or 188% */
+    text-align: center;
+    letter-spacing: 0.06em;
+
+    color: #ffffff;
+  }
+
+  &__button:is(:hover, :focus, :active) {
+    background-color: $hoverfocusactiveColor;
+    color: $primaryBg;
+    border-color: $hoverfocusactiveColor;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  }
+
   &__inputs {
     display: flex;
     align-items: center;
@@ -124,6 +147,10 @@
     transition-duration: $globalTransitionDuration;
     transition-timing-function: $globalTransitionTimingFunction;
     /* margin-left: 12px; */
+  }
+
+  &__inputs:is(:hover, :focus, :active) {
+    border-color: $hoverfocusactiveColor;
   }
 
   &__inputs--comment {
@@ -140,10 +167,11 @@
     color: $primaryFontColor;
   }
 
-  &__input-width {
+  &__inputs-width {
     width: 394px;
     margin-left: 12px;
     border: none;
+    outline: none;
   }
 
   &__labels {
@@ -200,4 +228,23 @@
 
   &__form {
   }
+}
+
+.checkbox__checkmark {
+  position: absolute;
+  align-items: center;
+  left: 0px;
+  height: 15px;
+  width: 16px;
+  margin-right: 0px;
+
+  /* background-color: #eee; */
+}
+
+.checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
