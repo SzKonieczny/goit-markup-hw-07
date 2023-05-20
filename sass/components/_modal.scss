@@ -116,7 +116,7 @@
     border: none;
   }
 
-  &__button p {
+  &__button span {
     font-style: normal;
     font-weight: 700;
     font-size: 16px;
@@ -151,6 +151,8 @@
 
   &__inputs:is(:hover, :focus, :active) {
     border-color: $hoverfocusactiveColor;
+    outline: none;
+    fill: $hoverfocusactiveColor;
   }
 
   &__inputs--comment {
